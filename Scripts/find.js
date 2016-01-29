@@ -23,6 +23,6 @@ function numFinder(arr){
 function numFind(arr) {
     var out = "";
     var i;
-    for(i = 0; i < arr.length; ++i) {out += arr[i].team_number + "<br>";console.log(out);}
+    for(i = 0; i < arr.length; ++i) {out += arr[i].team_number + ",";console.log(out);}
     document.getElementById("blank").innerHTML = out;
 }
