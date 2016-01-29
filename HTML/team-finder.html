@@ -1,29 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-
+  <script type="text/javascript" src="../scripts/find.js"></script>
 </head>
-<body>
-
+<body background="../Img/back.png">
 
 <img id = "logo" src = "../Img/logo.png" width = "123" height = "100">
 
 <!--<h1>Team Finder</h1>-->
+<p id="title">Storm Robotics Team Finder</p> 
 
-<p id="title">Storm Robotics Team Finder</p>
-
-<p id="blank"> </p>
+<!--Output-->
+<p id="blank"> </p> 
 
 <button type = "button"
-onclick = "document.getElementById('blank').innerHTML = '[Team Numbers Go Here]'">
+onclick = "req()">
 Go!</button>
 
 <p id="explain">This is supposed to gather a list of all the FRC Team numbers in the world.</p>
 
-<!-- 
-<script src="../scripts/find.js"></script>
--->
 
 </body>
 </html>
