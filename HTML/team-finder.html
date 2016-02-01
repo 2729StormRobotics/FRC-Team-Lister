@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html>
+<style>
+
+</style>
 <head>
-  <script type="text/javascript" src="../scripts/find3.js"></script>
+	<link rel="stylesheet" type="text/css" href="../CSS/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="../scripts/find3.js"></script>
 </head>
-<body background="../Img/back.png">
+<body>
+<div id= "backGrad"></div>
+<img id = "logo" src = "../Img/animLogo.gif">
 
-<img id = "logo" src = "../Img/logo.png" width = "123" height = "100">
+<h1>Storm Robotics Team Finder</h1>
 
-<!--<h1>Team Finder</h1>-->
-<p id="title">Storm Robotics Team Finder</p> 
+<p id="info">This should gather a list of all the FRC Team numbers in the world.</p>
 
 <!--Output-->
+<p id="blank2"> </p>
 <p id="blank"> </p> 
 
-<button type = "button"
+<!-- <button type = "button"
 onclick = "req()">
-Go!</button>
+Go!</button> -->
 
-<p id="explain">This should gather a list of all the FRC Team numbers in the world.</p>
-<div>
-<div>
-<p id="credit">Made by Joshua B. & Thomas O. (FRC 2729), JavaScript fixed by Andrew L. (FRC 225)
+<button id="butt1" href="#" class="button" onclick = "req()" onclick = "hideButton()">Go!</button>
+
+<br>
+<br>
+<p id="credit">Made by Joshua B. & Thomas O. (FRC 2729) <br> Revision 2 of JavaScript by Andrew L. (FRC 225) <br> Revision 3 of JavaScript by Evan A. (FRC 2729 Alumni)</p>
 
 </body>
 </html>

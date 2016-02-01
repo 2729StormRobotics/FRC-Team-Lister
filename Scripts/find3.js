@@ -5,7 +5,7 @@ var nRequest = new Array(numPages);
 var teams = new Array();
 var response = new Array(numPages)
 function req(){
-    document.getElementById("blank").innerHTML = "Loading...";
+    document.getElementById("blank2").innerHTML = "Loading...";
  
     for (var i = 0; i < numPages; ++i) {
         response[i] = false;
@@ -52,7 +52,8 @@ function numFind(arr) {
             out += ", " + teams[i].toString();
         }
         document.getElementById("blank").innerHTML = out;
+		document.getElementById("blank2").innerHTML = " ";
     } else {
-        document.getElementById("blank").innerHTML = "Loading... (" + responseCount + "/" + numPages + ")";
+        document.getElementById("blank2").innerHTML = "Loading... (" + responseCount + "/" + numPages + ")";
     }
 }
