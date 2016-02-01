@@ -1,0 +1,55 @@
+body{
+	background: #bf0000;
+	background: linear-gradient(right, #ff7f00, #bf0000, #ff7f00); /* Standard syntax */
+	background: -webkit-linear-gradient(right, #ff7f00, #bf0000, #ff7f00); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #ff7f00, #bf0000, #ff7f00); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #ff7f00, #bf0000, #ff7f00); /* For Firefox 3.6 to 15 */
+}
+
+h1 {
+	font-family: 'Orbitron', sans-serif;
+	font-size: 50px;
+	text-align: center;
+	color: Black;
+}
+
+#info{
+	text-align: center;
+}
+
+#blank2{
+	font-size: 20px;
+	text-align: center;
+}
+
+#blank{
+	text-align: center;
+}
+
+#credit{
+	text-align: center;
+	font-size: 10px;
+}
+
+#logo{
+	height: 123px;
+	width: 123px;
+	position: relative;
+	top: 0%;
+	left: 46%;
+}
+
+.button {
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	position: relative;
+	left: 48%;
+}
