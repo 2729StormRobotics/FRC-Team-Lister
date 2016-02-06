@@ -1,52 +1,69 @@
 var numPages = 13;
 var out = ""
+var precent;
 var URL = new Array(numPages);
 var nRequest = new Array(numPages);
 var teams = new Array();
 var response = new Array(numPages)
-
-function createCORSRequest(method, url) {
-  var xhr = new XMLHttpRequest();
-  if ("withCredentials" in xhr) {
-    // XHR for Chrome/Firefox/Opera/Safari.
-    xhr.open(method, url, true);
-  } else if (typeof XDomainRequest != "undefined") {
-    // XDomainRequest for IE.
-    xhr = new XDomainRequest();
-    xhr.open(method, url);
-  } else {
-    // CORS not supported.
-    xhr = null;
-  }
-  return xhr;
+function req(){
+  //  document.getElementById("blank2").innerHTML = "Loading...";
+ 
+    for (var i = 0; i < numPages; ++i) {
+        response[i] = false;
+    }
+ 
+    for (var i = 0; i < numPages; ++i) {
+        (function(i) {
+            URL[i] = "http://thebluealliance.com/api/v2/teams/" + i + "?X-TBA-App-Id=mrmoko:number-scraper:v02";
+            nRequest[i] = new XMLHttpRequest();
+            nRequest[i].open("GET", URL[i], true);
+            nRequest[i].onreadystatechange = function (oEvent) {
+                if (nRequest[i].readyState === 4) {
+                    if (nRequest[i].status === 200) {
+                        response[i] = true;
+                        numFind(JSON.parse(nRequest[i].responseText));
+                    } else {
+                        console.log("Error", nRequest[i].statusText);
+                    }
+                }
+            };
+            nRequest[i].send(null);
+        })(i);
+    }
 }
-
-// Helper method to parse the title tag from the response.
-function getTitle(text) {
-  return text.match('<title>(.*)?</title>')[1];
+ 
+function sortNumber(a,b) {
+    return a - b;
 }
-
-// Make the actual CORS request.
-function makeCorsRequest() {
-  // All HTML5 Rocks properties support CORS.
-  var url = 'http://thebluealliance.com/api/v2/teams/';
-
-  var xhr = createCORSRequest('GET', url);
-  if (!xhr) {
-    alert('CORS not supported');
-    return;
-  }
-
-  // Response handlers.
-  xhr.onload = function() {
-    var text = xhr.responseText;
-    var title = getTitle(text);
-    alert('Response from CORS request to ' + 'http://thebluealliance.com/api/v2/teams/' + ': ' + title);
-  };
-
-  xhr.onerror = function() {
-    alert('Woops, there was an error making the request.');
-  };
-
-  xhr.send();
+ 
+function numFind(arr) {
+    for(var x = 0; x < arr.length; ++x) {
+        teams.push(parseInt(arr[x].team_number));
+    }
+ 
+    var responseCount = 0;
+    for (var i = 0; i < numPages; ++i) {
+        if (response[i]) ++responseCount;
+    }
+ 
+    if (responseCount == numPages) {
+        teams.sort(sortNumber);
+        out = teams[0].toString();
+        for (var i = 1; i < teams.length; ++i) {
+            out += ", " + teams[i].toString();
+        }
+        document.getElementById("blank").innerHTML = out;
+		document.getElementById("blank2").innerHTML = " ";
+    } else {
+		if ( responseCount == 12) {
+		precent = 100
+		$('.progress-bar').css('width', precent+'%').attr('aria-valuenow', precent);
+			console.log(responseCount + "/" + numPages + "*100 = " + responseCount/numPages*100)
+		}
+		else {
+			precent = Math.round(responseCount/numPages*100)
+			$('.progress-bar').css('width', precent+'%').attr('aria-valuenow', precent);
+			console.log(responseCount + "/" + numPages + "*100 = " + responseCount/numPages*100)
+		}
+    }
 }

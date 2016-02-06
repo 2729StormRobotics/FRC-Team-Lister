@@ -1,4 +1,3 @@
-
 body{
 	background: #bf0000;
 	background: linear-gradient(right, #ff7f00, #bf0000, #ff7f00); /* Standard syntax */
@@ -7,13 +6,24 @@ body{
     background: -moz-linear-gradient(right, #ff7f00, #bf0000, #ff7f00); /* For Firefox 3.6 to 15 */
 }
 
-h1 {
+#headLogo{
+	position: relative;
+	height: 25%;
+	width: 25%;
+	top: 0%;
+	left: 0%;
+}
+
+#bar{
+	position: relative;
+	left: -7%;
+}
+
+h1{
 	font-family: 'Orbitron', sans-serif;
 	font-size: 50px;
 	text-align: center;
-	background: -webkit-radial-gradient(#fff, #000, #fff);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	color: #333333;
 }
 
 #info{
@@ -23,16 +33,18 @@ h1 {
 #extension{
 	font-size: 10px;
 	text-align: center;
-	color: white;
+	color: #333333;
 }
 
 #extLink{
+	font-size: 11px;
 	color: #000;
 }
 
 #blank2{
 	font-size: 20px;
 	text-align: center;
+	color: white;
 }
 
 #blank{
@@ -109,15 +121,35 @@ h1 {
 
 .button {
     background-color: transparent;
-    border: 1px solid black;
-    color: black;
+    color: white;
     padding: 15px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 10px;
+    font-size: 50%;
     margin: 4px 2px;
     cursor: pointer;
 	position: relative;
 	left: 48%;
+}
+
+.progress {
+	position: relative;
+	background: #333333; 
+	border: 1px solid #000; 
+	border-radius: 1px; 
+	height: 20px;
+	width: 20%;
+	left: 40%;
+}
+
+.progress-bar-custom {
+	background: rgba(66, 139, 202, 1);
+} 
+.progress-striped .progress-bar-custom {
+	background-color: #bf0000;
+	background-image: -webkit-gradient(linear,0 100%,100% 0,color-stop(0.25, #ff7f00,color-stop(1,transparent),color-stop(1,transparent),color-stop(1, #ff7f00),color-stop(1, #ff7f00),color-stop(1,transparent),to(transparent))); 
+	background-image: -webkit-linear-gradient(45deg, #ff7f00 25%,transparent 25%,transparent 50%,#ff7f00 50%,#ff7f00 75%,transparent 75%,transparent); 
+	background-image: linear-gradient(45deg, #ff7f00 25%,transparent 25%,transparent 50%,#ff7f00 50%,#ff7f00 75%,transparent 75%,transparent); 
+	background-size: 40px 40px;
 }
