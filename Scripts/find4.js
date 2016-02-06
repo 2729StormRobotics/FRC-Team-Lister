@@ -1,6 +1,7 @@
 var numPages = 13;
 var out = ""
 var precent;
+var on = true;
 var URL = new Array(numPages);
 var nRequest = new Array(numPages);
 var teams = new Array();
@@ -55,10 +56,12 @@ function numFind(arr) {
         document.getElementById("blank").innerHTML = out;
 		document.getElementById("blank2").innerHTML = " ";
     } else {
-		if ( responseCount == 12) {
-		precent = 100
-		$('.progress-bar').css('width', precent+'%').attr('aria-valuenow', precent);
+		if ( responseCount == numPages-1) {
+			precent = 100
+			$('.progress-bar').css('width', precent+'%').attr('aria-valuenow', precent);
 			console.log(responseCount + "/" + numPages + "*100 = " + responseCount/numPages*100)
+			setTimeout(function bye(){
+			$('#leBar').css('display', 'none'); on = false; console.log(on)}, 1000);
 		}
 		else {
 			precent = Math.round(responseCount/numPages*100)
@@ -66,4 +69,20 @@ function numFind(arr) {
 			console.log(responseCount + "/" + numPages + "*100 = " + responseCount/numPages*100)
 		}
     }
+}
+
+function bar(){
+	if (on == true){
+		req()
+	}
+	else {
+		$('#leBar').css('display', 'block');
+		document.getElementById('blank').innerHTML = "";
+		$('.progress-bar').css('width', '0%').attr('aria-valuenow', precent);
+		out = "";
+		teams.length = 0;
+		console.log(teams.toString())
+		setTimeout(req(), 1000);
+		console.log(out)
+	}
 }
