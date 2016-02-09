@@ -6,17 +6,26 @@ body{
     background: -moz-linear-gradient(right, #ff7f00, #bf0000, #ff7f00); /* For Firefox 3.6 to 15 */
 }
 
+.navbar-toggle{
+	height: ;
+	width: 50px !important;
+}
+
+#burgerIcon{
+	height: 30px;
+	width: 30px;
+}
+
 #headLogo{
 	position: relative;
 	height: 25%;
 	width: 25%;
-	top: 0%;
-	left: 0%;
+	right: 50%;
 }
 
-#bar{
+#bs-example-navbar-collapse-1{
 	position: relative;
-	left: -7%;
+	right: 20%;
 }
 
 h1{

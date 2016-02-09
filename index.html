@@ -4,6 +4,7 @@
 
 </style>
 <head>
+
 	<title>FRC 2729 Team Finder</title>
 	<!-- Strao Your Boots -->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -20,30 +21,36 @@
 	<script type="text/javascript" src="Scripts/find4.js"></script>
 	<!-- On The Go Adjustments -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <img id="headLogo" class="img-responsive" alt="Storm Robotics FRC 2729" src="resc/logo.png">
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+			<img id="headLogo" src="resc/logo.png"></img>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span><img id="burgerIcon" src="resc/logo.png"></img></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a target="_blank" href="http://stormroboticsnj.org/">Main Site</a></li>
+				<li><a target="_blank" href="https://twitter.com/stormroboticsnj">Twitter</a></li>
+				<li><a target="_blank" href="https://www.facebook.com/frc2729ftc4390">Facebook</a></li> 
+				<li><a target="_blank" href="https://www.instagram.com/stormroboticsnj/">Instagram</a></li> 
+				<li><a target="_blank" href="https://www.youtube.com/user/stormroboticsteam">YouTube</a></li> 
+				<li><a target="_blank" href="https://github.com/2729StormRobotics">GitHub</a></li> 
+            </ul>
+        </div>
     </div>
-    <ul id="bar" class="nav navbar-nav">
-      <li class="active"><a target="_blank" href="http://stormroboticsnj.org/">Main Site</a></li>
-      <li><a target="_blank" href="https://twitter.com/stormroboticsnj">Twitter</a></li>
-      <li><a target="_blank" href="https://www.facebook.com/frc2729ftc4390">Facebook</a></li> 
-      <li><a target="_blank" href="https://www.instagram.com/stormroboticsnj/">Instagram</a></li> 
-	  <li><a target="_blank" href="https://www.youtube.com/user/stormroboticsteam">YouTube</a></li> 
-	  <li><a target="_blank" href="https://github.com/2729StormRobotics">GitHub</a></li> 
-    </ul>
-  </div>
 </nav>
 
 <br><br>
 
 <div class="container-fluid">
 	<h1>Storm Robotics Team Finder</h1>
-
 	<p id="info">Need every FRC team number in the world? Then go ahead and hit that button.</p>
 	<div id="extension">
 		<p id="extText">You need to get <a id="extLink" 
