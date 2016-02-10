@@ -25,10 +25,10 @@
 </head>
 <body>
 
-<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-			<img id="headLogo" src="resc/logo.png"></img>
+<nav id="navBar" class="navbar navbar-inverse navbar-static-top" role="navigation">
+	<div class="container">
+        <div id="barHead" class="navbar-header">
+			<img id="headLogo" src="resc/storm.png"></img>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span><img id="burgerIcon" src="resc/logo.png"></img></span>
@@ -44,14 +44,19 @@
 				<li><a target="_blank" href="https://github.com/2729StormRobotics">GitHub</a></li> 
             </ul>
         </div>
-    </div>
+	</div>
 </nav>
 
 <br><br>
 
 <div class="container-fluid">
 	<h1>Storm Robotics Team Finder</h1>
-	<p id="info">Need every FRC team number in the world? Then go ahead and hit that button.</p>
+	<div class="row">
+		<div class="col-xs-12">
+			<p id="info">Need every FRC team number in the world? Then go ahead and hit that button.</p>
+		</div>
+	</div>
+	
 	<div id="extension">
 		<p id="extText">You need to get <a id="extLink" 
 		href="https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi" 
@@ -59,16 +64,23 @@
 	</div>
 
 	<!--Output-->
-	<p id="blank2"> </p>
-	<div id="leBar" class="progress progress-striped">
-		<div class="progress-bar progress-bar-custom active" role="progressbar"
-		aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+	<div class="row">
+		<div class="col-xs-12">
+			<div id="leBar" class="progress progress-striped">
+				<div class="progress-bar progress-bar-custom active" role="progressbar"
+				aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+				</div>
+			</div>
 		</div>
 	</div>
-	<p id="blank"> </p> 
-
-	<button id="butt1" href="#" class="button" onclick = "bar()" onclick = "hideButton()">Go</button>
-
+	<div class="row">
+		<div class="col-xs-12">
+			<p id="blank"> </p> 
+		</div>
+	</div>
+		<div class="center">
+			<button id="butt1" href="#" class="button" onclick = "bar()" onclick = "hideButton()">Go</button>
+		</div>
 	<br>
 	<br>
 
