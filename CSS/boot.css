@@ -16,18 +16,35 @@ body{
 	width: 30px;
 }
 
+/*
 #headLogo{
 	position: relative;
 	height: 100%;
 	width: 100%;
-	right: 55%;
+	right: 0%;
 	padding-top: 5%;
 }
+*/
 
-@media (max-width: 640px) {
-    #headLogo{
-        display: none;
-    }
+#headLogo.img-responsive{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	right: 50%;
+	padding-top: 5%;
+	padding-left: 5%;
+}
+/*
+@media (max-width: 600px){
+	.img-responsive{
+		display: none !important;
+	}
+}
+*/
+@media(max-width: 817px){
+	.img-responsive{
+		display: none !important;
+	}
 }
 
 h1{
