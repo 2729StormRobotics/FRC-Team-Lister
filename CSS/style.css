@@ -1,0 +1,123 @@
+
+body{
+	background: #bf0000;
+	background: linear-gradient(right, #ff7f00, #bf0000, #ff7f00); /* Standard syntax */
+	background: -webkit-linear-gradient(right, #ff7f00, #bf0000, #ff7f00); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #ff7f00, #bf0000, #ff7f00); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #ff7f00, #bf0000, #ff7f00); /* For Firefox 3.6 to 15 */
+}
+
+h1 {
+	font-family: 'Orbitron', sans-serif;
+	font-size: 50px;
+	text-align: center;
+	background: -webkit-radial-gradient(#fff, #000, #fff);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#info{
+	text-align: center;
+}
+
+#extension{
+	font-size: 10px;
+	text-align: center;
+	color: white;
+}
+
+#extLink{
+	color: #000;
+}
+
+#blank2{
+	font-size: 20px;
+	text-align: center;
+}
+
+#blank{
+	text-align: center;
+}
+
+#credit{
+	text-align: center;
+	font-size: 10px;
+}
+
+#logo{
+	height: 123px;
+	width: 123px;
+	position: relative;
+	top: 0%;
+	left: 46%;
+}
+
+.button{
+	background: url(../resc/logo.png) no-repeat;
+	background-size: 55px 55px;
+	height: 55px;
+	width: 55px;
+	border: none;
+	padding: 15px 15px;
+	color: white;
+	text-align: center;
+    text-decoration: none;
+	font-size: 9px;
+	cursor: pointer;
+	position: relative;
+	left: 48%;
+}
+
+.button:active{
+	background: url(../resc/logoClick.png) no-repeat;
+	background-size: 55px 55px;
+	color: #b3b3b3;
+}
+
+#egg{
+	position: relative;
+	display: block; 
+	width: 100px; height: 100px; /* you'll have to set the H/W to the H/W of you text*/
+	text-align: center;
+	text-decoration: none; /* gets rid opf the old breadcrumbs*/
+	color: black; /* sets text color to black*/
+	background-color: transparent; /* speaks for itself*/
+	font: 11px verdana; /* sets font size then font style*/
+}
+#egg:hover {
+	
+	background-image: url('../resc/meh.jpg');
+	background-repeat: no-repeat; 
+	background-size: 50px 50px;
+	width: 50px; 
+	height: 50px;
+	border: 1px solid black;
+}
+
+#egg .text{
+	position: relative;
+	text-align: center;
+	bottom: 48%;
+	right: 4%;
+	color: white;
+	visibility: hidden;
+}
+
+#egg:hover .text{
+	visibility: visible;
+}
+
+.button {
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+	position: relative;
+	left: 48%;
+}
