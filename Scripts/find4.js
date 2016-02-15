@@ -51,7 +51,7 @@ function numFind(arr) {
         teams.sort(sortNumber);
         out = teams[0].toString();
         for (var i = 1; i < teams.length; ++i) {
-            out += "," + teams[i].toString();
+            out += " ," + teams[i].toString();
         }
         document.getElementById("blank").innerHTML = "," + out + ",";
 		document.getElementById("blank2").innerHTML = " ";
