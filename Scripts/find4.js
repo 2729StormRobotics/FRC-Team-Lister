@@ -53,7 +53,7 @@ function numFind(arr) {
         for (var i = 1; i < teams.length; ++i) {
             out += "," + teams[i].toString();
         }
-        document.getElementById("blank").innerHTML = out + ",";
+        document.getElementById("blank").innerHTML = "," + out + ",";
 		document.getElementById("blank2").innerHTML = " ";
     } else {
 		if ( responseCount == numPages-1) {
