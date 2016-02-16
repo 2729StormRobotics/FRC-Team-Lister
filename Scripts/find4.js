@@ -86,3 +86,13 @@ function bar(){
 		console.log(out)
 	}
 }
+
+var clipboard = new Clipboard('.btn');
+function clip(){
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+}
