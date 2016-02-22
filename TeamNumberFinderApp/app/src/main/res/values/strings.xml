@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Team Number Finder App</string>
+    <string name="out"></string>
+    <string name="pageNumber">0</string>
+</resources>

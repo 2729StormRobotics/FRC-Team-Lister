@@ -225,6 +225,8 @@
     <!-- From: file:/C:/Users/Josh/Desktop/Robotics/Scouting/FRC-Team-Lister/TeamNumberFinderApp/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="app_name">Team Number Finder App</string>
+    <string name="out"/>
+    <string name="pageNumber">0</string>
     <!-- From: file:/C:/Users/Josh/Desktop/Robotics/Scouting/FRC-Team-Lister/TeamNumberFinderApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
