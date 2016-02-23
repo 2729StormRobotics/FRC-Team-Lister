@@ -14,22 +14,35 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 
+
 public class MainActivity extends AppCompatActivity {
 
     public final static String apiURL = "www.thebluealliance.com/api/v2/teams/";
     public final static String header = "?frc2729:num-find-app:v01";
+    public static Integer pageNum = 0;
+    public final static Integer pages = 13;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        String urlString = apiURL + "1" + header;
+        String urlString = apiURL + pageNum + header;
         new CallAPI().execute(urlString);
     }
 
+   /*
+   public void onClick(View v){
+
+    }
+    */
+
     public void changeBlank(View view) {
-        ((TextView) findViewById(R.id.blank)).setText("Say Yes " + 3+5 );
+        for (int i=0; i<=pages;){
+            ((TextView) findViewById(R.id.blank)).setText(apiURL+ pageNum + header );
+             pageNum += 1;
+            i += 1;
+        }
     }
 }
 
