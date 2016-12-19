@@ -15,7 +15,7 @@ function req(){
  
     for (var i = 0; i < numPages; ++i) {
         (function(i) {
-            URL[i] = "http://thebluealliance.com/api/v2/teams/" + i + "?X-TBA-App-Id=mrmoko:number-scraper:v02";
+            URL[i] = "https://thebluealliance.com/api/v2/teams/" + i + "?X-TBA-App-Id=mrmoko:number-scraper:v02";
             nRequest[i] = new XMLHttpRequest();
             nRequest[i].open("GET", URL[i], true);
             nRequest[i].onreadystatechange = function (oEvent) {
